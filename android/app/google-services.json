@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "900676770085",
+    "firebase_url": "https://quick-spec-pro.firebaseio.com",
+    "project_id": "quick-spec-pro",
+    "storage_bucket": "quick-spec-pro.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:900676770085:android:6eeadb8e34e2a6911962cc",
+        "android_client_info": {
+          "package_name": "dev.viperbyte.quickspecpro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "900676770085-viclg39598amn2eb92c1qrjldd3363vj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEr0bHoIncW5tnqbUDWbbSrTjXA2GU-PY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "900676770085-viclg39598amn2eb92c1qrjldd3363vj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

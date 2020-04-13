@@ -1,0 +1,1038 @@
+{
+  "title": "Home Inspection",
+  "inspectionDate": "2020-02-07",
+  "inspectionAddress": {
+    "address": "1234 Happy Street",
+    "city": "Alabaster",
+    "state": "AL",
+    "zip": "35007"
+  },
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  "coverPhoto": "https://cdn.spectora.com/reports/images/f3ea4d6f-3868-4f6e-ba4d-5e7ee7ac1f3e/original/cover.jpg",
+  "inspectorName": "John Clark",
+  "inspectorPhoneNumber": "205.999.1234",
+  "inpsectorLogo": "https://cdn.spectora.com/companies/images/000/001/144/original/SlabToSlateArtboard_6.jpg",
+  "ctaLink": "http://github.com",
+  "ctaText": "Visit Website",
+  "reportSections": [
+    {
+      "title": "Inspection Details",
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "sectionItems": [
+        {
+          "title": "General",
+          "ItemFeatures": {
+            "occupancy": ["Occupied", "Furnished"],
+            "style": ["Modern", "Ranch"],
+            "attendance": ["Home Owner"],
+            "buildingType": ["Single Family"],
+            "temperature": ["75"],
+            "weatherConditions": ["Hot", "Cloudy"]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Roof",
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "overallCondition": "Excellent",
+      "sectionItems": [
+        {
+          "title": "General",
+          "inspectionMethod": ["Ladder"],
+          "roofType": ["Gable"]
+        },
+        {
+          "title": "Coverings",
+          "material": ["Tile", "Wood"],
+          "observations": [
+            {
+              "title": "Near End of Life",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Poor"
+        },
+        {
+          "title": "Gutters/Drain System",
+          "material": ["Aluminum"],
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Excellent"
+        },
+        {
+          "title": "Roof Vents",
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Excellent"
+        },
+        {
+          "title": "Roof Flashing",
+          "material": ["Aluminum"],
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Excellent"
+        },
+        {
+          "title": "Roof Skylights",
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Excellent"
+        },
+        {
+          "title": "Chimney",
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Excellent"
+        },
+        {
+          "title": "Other Penetrations",
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Excellent"
+        }
+      ]
+    },
+    {
+      "title": "Exterior",
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "overallCondition": "Great",
+      "sectionItems": [
+        {
+          "title": "General",
+          "inspectionMethod": ["Ladder", "Drone"]
+        },
+        {
+          "title": "Siding/Flashing/Trim",
+          "material": ["Wood", "Aluminum"],
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Eaves/Soffits/Fasia",
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Exterior Windows",
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Excellent"
+        },
+        {
+          "title": "Exterior Doors",
+          "entryDoorType": ["Fiberglass"],
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Excellent"
+        },
+        {
+          "title": "Flashing/Trim",
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Deck/Balconies/Steps",
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Excellent"
+        },
+        {
+          "title": "Walkways/Patios/Driveways",
+          "material": ["Asphalt"],
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Excellent"
+        }
+      ]
+    },
+    {
+      "title": "Structure/Foundation",
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "overallCondition": "Great",
+      "sectionItems": [
+        {
+          "title": "General",
+          "inspectionMethod": ["Crawlspace"]
+        },
+        {
+          "title": "Foundation",
+          "material": ["Brick"],
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Basements/Crawlspaces",
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Floor Structure",
+          "floorMaterial": ["Concrete"],
+          "subFloorMaterial": ["Plywood"],
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Wall Structure",
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Ceiling Structure",
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        }
+      ]
+    },
+    {
+      "title": "Heating",
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "overallCondition": "Great",
+      "sectionItems": [
+        {
+          "title": "General",
+          "afueRating": ""
+        },
+        {
+          "title": "Equipment",
+          "brand": ["Trane"],
+          "energySource": ["Solar", "Electric"],
+          "heatType": ["Heat Pump", "Space Heater"],
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Normal Operating Controls",
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Distribution Systems",
+          "Ductwork": ["Insulated"],
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        }
+      ]
+    },
+    {
+      "title": "Cooling",
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "overallCondition": "Great",
+      "sectionItems": [
+        {
+          "title": "Equipment",
+          "brand": ["Trane"],
+          "energySource": ["Solar", "Electric"],
+          "location": ["Exterior West"],
+          "seerRating": "",
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Normal Operating Controls",
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Distribution Systems",
+          "Configuration": ["Central"],
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        }
+      ]
+    },
+    {
+      "title": "Plumbing",
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "overallCondition": "Great",
+      "sectionItems": [
+        {
+          "title": "General",
+          "filters": ["Whole House"],
+          "waterSource": ["Well", "Public"]
+        },
+        {
+          "title": "Main Water Shut-off",
+          "location": ["Basement"],
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Drain/Waste/Vents",
+          "drainSize": "1 1/2",
+          "material": "Copper",
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Water Supply/Distribution Systems",
+          "distributionMaterial": ["PVC"],
+          "waterSupplyMaterial": ["PVC"],
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Hot Water Systems",
+          "capacity": ["100 gallons"],
+          "location": ["Attic"],
+          "manufacturer": ["GE"],
+          "powerSource": ["Gas"],
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Fuel Storage",
+          "shutoffLocation": ["Gas Meter"],
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Sump Pump",
+          "location": ["Basement"],
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        }
+      ]
+    },
+    {
+      "title": "Electrical",
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "overallCondition": "Great",
+      "sectionItems": [
+        {
+          "title": "Service Entrance Conductors",
+          "electricServiceConductors": ["Below Ground", "220 Volts"],
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Main/Subpanels",
+          "mainPanelLocation": "Garage",
+          "panelCapacity": "225 AMP",
+          "panelManufacturer": "Bryant",
+          "panelType": "Circuit Breaker",
+          "subPanelLocation": ["Hallway", "Kitchen"],
+          "material": "Copper",
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Breakers/Fuses",
+          "branchWireMaterial": ["Copper"],
+          "waterSupplyMaterial": ["Conduit"],
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Lighting Fixtures",
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Switches/Receptacles",
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "GFCI/AFCI",
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Smoke Detectors",
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Carbon Monoxide Detectors",
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        }
+      ]
+    },
+    {
+      "title": "Fireplace",
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "overallCondition": "Great",
+      "sectionItems": [
+        {
+          "title": "General",
+          "type": ["Wood"],
+          "waterSource": ["Well", "Public"]
+        },
+        {
+          "title": "Vents/Flues/Chimneys",
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Lintels",
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Damper Doors",
+          "branchWireMaterial": ["Copper"],
+          "waterSupplyMaterial": ["Conduit"],
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Cleanout Doors/Frames",
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        }
+      ]
+    },
+    {
+      "title": "Attic/Insulation/Ventilation",
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "overallCondition": "Great",
+      "sectionItems": [
+        {
+          "title": "Attic Insulation",
+          "insulationType": ["Fiberglass"],
+          "rValue": "",
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Vapor Barriers",
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Ventilation",
+          "ventilationType": ["Soffit Vents", "Whole House Fan"],
+          "branchWireMaterial": ["Copper"],
+          "waterSupplyMaterial": ["Conduit"],
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Exhaust Fans",
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        }
+      ]
+    },
+    {
+      "title": "Doors/Windows/Interior",
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "overallCondition": "Great",
+      "sectionItems": [
+        {
+          "title": "Doors",
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Windows",
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Floors",
+          "material": ["Hardwood", "Tile"],
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Walls",
+          "material": ["Drywall", "Brick"],
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Ceilings",
+          "material": ["Drywall", "Wood"],
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Stairs/Railings",
+          "material": ["Drywall", "Wood"],
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Countertops/Cabinets",
+          "cabinetMaterial": ["Wood"],
+          "countertopMaterial": ["Granite"],
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        }
+      ]
+    },
+    {
+      "title": "Built-in Appliances",
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "overallCondition": "Great",
+      "sectionItems": [
+        {
+          "title": "Dishwasher",
+          "brand": ["GE"],
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Refrigerator",
+          "brand": ["GE"],
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Range/Oven/Cooktop",
+          "brand": ["GE"],
+          "hoodType": "Vented",
+          "energySource": "Electric",
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Garbage Disposal",
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Built-in Microwave",
+          "material": ["Drywall", "Wood"],
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        }
+      ]
+    },
+    {
+      "title": "Garage",
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "overallCondition": "Great",
+      "sectionItems": [
+        {
+          "title": "Ceiling",
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Floor",
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Walls/Firewalls",
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Garage Door/Opener",
+          "material": ["Metal"],
+          "type": ["Automatic"],
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        },
+        {
+          "title": "Occupant Door to Home",
+          "observations": [
+            {
+              "title": "Lorem ipsum",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "mediaUrl": "https://dummyimage.com/600x400/222222/fff.jpg"
+            }
+          ],
+          "shortDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+          "fullDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "condition": "Great"
+        }
+      ]
+    }
+  ]
+}
