@@ -31,22 +31,30 @@ class CoreDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.home),
             title: Text('Account'),
-            onTap: () => AccountPage.show(context),
+            onTap: () {
+              Navigator.of(context).pop();
+              AccountPage.show(context);
+            },
           ),
           ListTile(
             leading: Icon(Icons.home),
             title: Text('Settings'),
-            onTap: () => SettingsPage.show(context),
+            onTap: () {
+              Navigator.of(context).pop();
+              SettingsPage.show(context);
+            },
           ),
           ListTile(
-            leading: Icon(Icons.home),
-            title: Text('Template Catalog'),
-            onTap: () => TemplateLibraryPage.show(context),
-          ),
+              leading: Icon(Icons.home),
+              title: Text('Template Catalog'),
+              onTap: () {
+                Navigator.of(context).pop();
+                TemplateLibraryPage.show(context);
+              }),
           ListTile(
             leading: Icon(Icons.exit_to_app),
             title: Text('Sign Out'),
-            onTap: () => _signout(context), 
+            onTap: () => _signout(context),
           ),
         ],
       ),

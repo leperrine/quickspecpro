@@ -14,7 +14,7 @@ class AccountPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BasicScaffold(
-          body: Column(
+      body: Column(
         children: <Widget>[
           Center(
             child: Text('Account Page'),

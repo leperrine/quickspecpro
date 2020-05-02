@@ -6,6 +6,7 @@ import 'package:quickspecpro/constants/strings.dart';
 import 'package:quickspecpro/routing/router.gr.dart';
 import 'package:quickspecpro/services/firebase_auth_service.dart';
 import 'package:quickspecpro/shared/buttons/form_submit_button.dart';
+import 'package:quickspecpro/shared/logo.dart';
 import 'package:quickspecpro/shared/platform_alert_dialog.dart';
 import 'package:quickspecpro/shared/platform_exception_alert_dialog.dart';
 
@@ -198,8 +199,10 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 2.0,
-        title: Text(model.title),
+        elevation: 5,
+        actions: <Widget>[
+          Logo(),
+        ],
       ),
       backgroundColor: Colors.grey[200],
       body: SingleChildScrollView(

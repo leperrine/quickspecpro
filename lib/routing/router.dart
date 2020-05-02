@@ -21,9 +21,11 @@ class $Router {
   LoginPageBuilder loginPageBuilder;
 
   @MaterialRoute(fullscreenDialog: false)
+  UserTemplatesPage userTemplatesPage;
+
+  @MaterialRoute(fullscreenDialog: false)
   InspectionsPage inspectionsPage;
   TemplateLibraryPage templateLibraryPage;
-  UserTemplatesPage userTemplatesPage;
   NewTemplatesPage newTemplatesPage;
   AccountPage accountPage;
   ContactsPage contactsPage;

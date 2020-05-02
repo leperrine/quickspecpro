@@ -11,16 +11,76 @@ class TemplateSectionsPage extends StatelessWidget {
         .pushNamed(Router.templateSectionsPage);
   }
 
+  Future<void> _deleteUserTemplate(
+      BuildContext context, UserTemplate userTemplate) async {
+    try {
+      final database = Provider.of<FirestoreDatabase>(context, listen: false);
+      await database.deleteUserTemplate(userTemplate);
+    } catch (e) {
+      PlatformExceptionAlertDialog(
+        exception: e,
+        title: 'An Error Has Occured',
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return BasicScaffold(
           body: Column(
-        children: <Widget>[
-          Center(
-            child: Text('Account Page'),
-          ),
-        ],
-      ),
+      children: <Widget>[
+        SizedBox(
+          height: 10.0,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            Center(
+              child: Text(
+                'Your Templates',
+                style: TextStyle(fontSize: 20.0),
+              ),
+            ),
+            FlatButton.icon(
+              textColor: Colors.green,
+              icon: Icon(Icons.add),
+              label: Text('add new'),
+              onPressed: () => NewTemplatesPage.show(context),
+            ),
+          ],
+        ),
+        SizedBox(
+          height: 10.0,
+        ),
+        Expanded(
+          child: _buildContents(context),
+        ),
+      ],
     );
   }
-}
+
+  Widget _buildContents(BuildContext context) {
+    final database = Provider.of<FirestoreDatabase>(context, listen: false);
+    return StreamBuilder<List<UserTemplate>>(
+      stream: database.userTemplatesStream(),
+      builder: (context, snapshot) {
+        return ListItemsBuilder<UserTemplate>(
+          snapshot: snapshot,
+          itemBuilder: (context, userTemplate) => Dismissible(
+            key: Key('userTemplate-${userTemplate.id}'),
+            background: Container(
+              color: Colors.red,
+            ),
+            direction: DismissDirection.endToStart,
+            onDismissed: (direction) =>
+                _deleteUserTemplate(context, userTemplate),
+            child: UserTemplateListTile(
+              userTemplate: userTemplate,
+              onTap: () =>
+                  TemplateSectionsPage.show(context, userTemplate: userTemplate),
+            ),
+          ),
+        );
+      },
+    );
+  }

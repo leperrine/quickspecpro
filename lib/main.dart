@@ -7,7 +7,6 @@ import 'package:quickspecpro/services/firebase_auth_service.dart';
 import 'package:quickspecpro/services/firestore_database.dart';
 import 'package:quickspecpro/app/auth/auth_widget.dart';
 import 'package:quickspecpro/app/auth/auth_widget_builder.dart';
-import 'package:quickspecpro/services/image_picker_service.dart';
 
 void main() => runApp(MyApp(
       authServiceBuilder: (_) => FirebaseAuthService(),
@@ -30,9 +29,6 @@ class MyApp extends StatelessWidget {
       providers: [
         Provider<FirebaseAuthService>(
           create: authServiceBuilder,
-        ),
-        Provider<ImagePickerService>(
-          create: (_) => ImagePickerService(),
         ),
       ],
       child: AuthWidgetBuilder(

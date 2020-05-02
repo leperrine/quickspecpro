@@ -32,7 +32,7 @@ class Inspection {
   final String ctaText;
   List<Section> sections;
 
-  factory Inspection.fromJson(Map<String, dynamic> json) => _$InspectionFromJson(json);
+  factory Inspection.fromJson(Map<String, dynamic> json, String documentId) => _$InspectionFromJson(json);
   Map<String, dynamic> toJson() => _$InspectionToJson(this);
   
 }

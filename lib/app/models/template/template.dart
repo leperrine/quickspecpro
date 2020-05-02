@@ -18,7 +18,7 @@ Template({
   final String coverPhoto;
   List<Section> sections;
 
-  factory Template.fromJson(Map<String, dynamic> json) => _$TemplateFromJson(json);
+  factory Template.fromJson(Map<String, dynamic> json, String documentId) => _$TemplateFromJson(json);
   Map<String, dynamic> toJson() => _$TemplateToJson(this);
   
 }

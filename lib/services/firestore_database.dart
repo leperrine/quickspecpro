@@ -9,70 +9,66 @@ import 'package:quickspecpro/app/models/inspection/inspection.dart';
 String documentIdFromCurrentDate() => DateTime.now().toIso8601String();
 
 class FirestoreDatabase {
-  FirestoreDatabase({@required this.uid}) : assert(uid != null);
+  FirestoreDatabase({
+    @required this.uid,
+  }) : assert(uid != null);
   final String uid;
-
+  
   final _service = FirestoreService.instance;
 
   // Inspection CRUD Operations
   Future<void> setInspection(Inspection inspection) async =>
-      await _service.setData(path: inspection.id, data: inspection.toJson());
+      await _service.setData(
+          path: FirestorePath.inspection(uid, inspection.id),
+          data: inspection.toJson());
 
   Future<void> deleteInspection(Inspection inspection) async => await _service
-      .deleteData(path: FirestorePath.template(uid, inspection.id));
+      .deleteData(path: FirestorePath.inspection(uid, inspection.id));
 
   Stream<Inspection> inspectionStream({@required String inspectionId}) =>
       _service.documentStream(
         path: FirestorePath.inspection(uid, inspectionId),
-        builder: (data, documentId) => Inspection.fromJson(data),
+        builder: (data, documentId) => Inspection.fromJson(data, documentId),
       );
 
-  Stream<List<Inspection>> inspectionsStream({Inspection inspection}) =>
+  Stream<List<Inspection>> inspectionsStream() =>
       _service.collectionStream(
         path: FirestorePath.templates(uid),
-        queryBuilder: inspection != null
-            ? (query) => query.where('inspectionId', isEqualTo: inspection.id)
-            : null,
-        builder: (data, documentId) => Inspection.fromJson(data),
+        builder: (data, documentId) => Inspection.fromJson(data, documentId),
       );
 
   // Template Library Streams
   Stream<Template> templateStream({@required String templateId}) =>
       _service.documentStream(
         path: FirestorePath.template(uid, templateId),
-        builder: (data, documentId) => Template.fromJson(data),
+        builder: (data, documentId) => Template.fromJson(data, documentId),
       );
 
-  Stream<List<Template>> templatesStream({Template template}) =>
+  Stream<List<Template>> templatesStream() =>
       _service.collectionStream(
         path: FirestorePath.templates(uid),
-        queryBuilder: template != null
-            ? (query) => query.where('templateId', isEqualTo: template.id)
-            : null,
-        builder: (data, documentId) => Template.fromJson(data),
+        builder: (data, documentId) => Template.fromJson(data, documentId),
       );
 
   // User Template Library CRUD Operations
   Future<void> setUserTemplate(UserTemplate userTemplate) async =>
       await _service.setData(
-          path: userTemplate.id, data: userTemplate.toJson());
+          path: FirestorePath.userTemplate(uid, userTemplate.id),
+          data: userTemplate.toJson());
 
   Future<void> deleteUserTemplate(UserTemplate userTemplate) async =>
       await _service.deleteData(
-          path: FirestorePath.template(uid, userTemplate.id));
+          path: FirestorePath.userTemplate(uid, userTemplate.id));
 
   Stream<UserTemplate> userTemplateStream({@required String userTemplateId}) =>
       _service.documentStream(
-        path: FirestorePath.template(uid, userTemplateId),
-        builder: (data, documentId) => UserTemplate.fromJson(data),
+        path: FirestorePath.userTemplate(uid, userTemplateId),
+        builder: (data, documentId) => UserTemplate.fromJson(data, documentId),
       );
 
-  Stream<List<UserTemplate>> userTemplatesStream({UserTemplate userTemplate}) =>
+  Stream<List<UserTemplate>> userTemplatesStream() =>
       _service.collectionStream(
-        path: FirestorePath.templates(uid),
-        queryBuilder: userTemplate != null
-            ? (query) => query.where('userTemplateId', isEqualTo: userTemplate.id)
-            : null,
-        builder: (data, documentId) => UserTemplate.fromJson(data),
+        path: FirestorePath.userTemplates(uid),
+        builder: (data, documentId) => UserTemplate.fromJson(data, documentId),
       );
 }

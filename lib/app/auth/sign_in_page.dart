@@ -1,6 +1,7 @@
 import 'package:quickspecpro/app/auth/login_page.dart';
 import 'package:quickspecpro/app/auth/sign_in_view_model.dart';
 import 'package:quickspecpro/app/auth/sign_in_button.dart';
+import 'package:quickspecpro/shared/logo.dart';
 import 'package:quickspecpro/shared/platform_exception_alert_dialog.dart';
 import 'package:quickspecpro/constants/keys.dart';
 import 'package:quickspecpro/constants/strings.dart';
@@ -20,7 +21,7 @@ class SignInPageBuilder extends StatelessWidget {
       child: Consumer<SignInViewModel>(
         builder: (_, SignInViewModel viewModel, __) => SignInPage._(
           viewModel: viewModel,
-          title: 'Architecture Demo',
+          title: 'QuickSpecPro',
         ),
       ),
     );
@@ -46,10 +47,10 @@ class SignInPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 2.0,
-        title: Text(title),
-      ),
+      // appBar: AppBar(
+      //   elevation: 2.0,
+      //   actions: <Widget>[Logo()],
+      // ),
       backgroundColor: Colors.grey[200],
       body: _buildSignIn(context),
     );
@@ -91,12 +92,8 @@ class SignInPage extends StatelessWidget {
             textColor: Colors.white,
             color: Theme.of(context).primaryColor,
           ),
-          SizedBox(height: 8),
-          Text(
-            Strings.or,
-            style: TextStyle(fontSize: 14.0, color: Colors.black87),
-            textAlign: TextAlign.center,
-          ),
+          SizedBox(height: 20),
+          Logo(),
         ],
       ),
     );

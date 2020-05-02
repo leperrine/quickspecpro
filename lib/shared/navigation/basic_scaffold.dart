@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:quickspecpro/app/auth/auth_widget_builder.dart';
 
 class BasicScaffold extends StatelessWidget {
   const BasicScaffold({
     Key key,
-    this.body,
+    @required this.body,
     this.floatingActionButton,
     this.floatingActionButtonLocation,
     this.bottomSheet,
@@ -24,13 +25,12 @@ class BasicScaffold extends StatelessWidget {
       height: 80.0,
     );
     return Scaffold(
-
-      appBar: AppBar(
-        actions: <Widget>[svg],
-      ),
-      body: body,
-      bottomSheet: bottomSheet,
-      // bottomNavigationBar: AppTabBar,
-    );
+        appBar: AppBar(
+          actions: <Widget>[svg],
+        ),
+        body: body,
+        bottomSheet: bottomSheet,
+        // bottomNavigationBar: AppTabBar,
+      );
   }
 }

@@ -1,84 +1,76 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:quickspecpro/app/contactPages/contacts_page.dart';
-import 'package:quickspecpro/constants/keys.dart';
 import 'package:quickspecpro/app/inspectionPages/inspections_page.dart';
 import 'package:quickspecpro/app/userTemplatePages/user_templates_page.dart';
+import 'package:quickspecpro/constants/keys.dart';
+import 'package:quickspecpro/shared/logo.dart';
 import 'package:quickspecpro/shared/navigation/core_drawer.dart';
 
 class CoreScaffold extends StatefulWidget {
-  const CoreScaffold({
-    Key key,
-  }) : super(key: key);
+  CoreScaffold({Key key}) : super(key: key);
+  
 
   @override
   _CoreScaffoldState createState() => _CoreScaffoldState();
 }
 
 class _CoreScaffoldState extends State<CoreScaffold> {
-  int _currentTab = 0;
-  final List<Widget> _pages = <Widget>[
+  List<Widget> pages = <Widget>[
     ContactsPage(),
     UserTemplatesPage(),
     InspectionsPage(),
   ];
+  int selectedIndex = 0;
 
   void _onTabTapped(int index) {
     setState(() {
-      _currentTab = index;
+      selectedIndex = index;
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    final String logo = 'assets/logo.svg';
-    final Widget svg = SvgPicture.asset(
-      logo,
-      semanticsLabel: 'Quick Spec Pro',
-      height: 80.0,
-    );
     return Scaffold(
       key: Key(Keys.tabBar),
-      // floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: null,
-      // ),
       appBar: AppBar(
         elevation: 5,
-        actions: <Widget>[svg],
+        actions: <Widget>[
+          Logo(),
+        ],
       ),
       drawer: CoreDrawer(),
-      bottomNavigationBar: BottomAppBar(
-        shape: const CircularNotchedRectangle(),
-        child: BottomNavigationBar(
-          fixedColor: Theme.of(context).primaryColor,
-          unselectedItemColor: Colors.black87,
-          unselectedIconTheme: IconThemeData(color: Colors.black87),
-          showUnselectedLabels: false,
-          type: BottomNavigationBarType.shifting,
-          backgroundColor: Theme.of(context).primaryColor,
-          currentIndex: _currentTab,
-          key: Key(Keys.tabBar),
-          items: <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-                icon: Icon(Icons.account_circle), title: Text('Contacts')),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.dashboard), title: Text('Templates')),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.assignment), title: Text('Inspections')),
-          ],
-          onTap: (index) {
-            setState(() {
-              _currentTab = index;
-            });
-          },
-        ),
-      ),
+      bottomNavigationBar: buildBottomAppBar(context),
       body: Center(
-        child: _pages[_currentTab],
+        child: pages.elementAt(selectedIndex),
       ),
+      backgroundColor: Colors.grey[50],
       // bottomNavigationBar: AppTabBar,
+    );
+  }
+
+  BottomAppBar buildBottomAppBar(BuildContext context) {
+    return BottomAppBar(
+      shape: const CircularNotchedRectangle(),
+      child: BottomNavigationBar(
+        fixedColor: Theme.of(context).primaryColor,
+        unselectedItemColor: Colors.black87,
+        unselectedIconTheme: IconThemeData(color: Colors.black87),
+        showUnselectedLabels: false,
+        type: BottomNavigationBarType.shifting,
+        backgroundColor: Theme.of(context).primaryColor,
+        currentIndex: selectedIndex,
+        key: Key(Keys.tabBar),
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+              icon: Icon(Icons.account_circle), title: Text('Contacts')),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.dashboard), title: Text('Templates')),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.assignment), title: Text('Inspections')),
+        ],
+        onTap: _onTabTapped,
+      ),
     );
   }
 }

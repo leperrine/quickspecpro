@@ -4,7 +4,9 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:quickspecpro/app/models/userTemplate/template.dart';
 import 'package:quickspecpro/app/userTemplatePages/template_sections_page.dart';
+import 'package:quickspecpro/services/firebase_auth_service.dart';
 import 'package:quickspecpro/services/firestore_database.dart';
+import 'package:quickspecpro/shared/buttons/media_button.dart';
 
 import 'package:quickspecpro/shared/navigation/basic_scaffold.dart';
 import 'package:quickspecpro/routing/router.gr.dart';
@@ -13,6 +15,7 @@ import 'package:quickspecpro/shared/platform_exception_alert_dialog.dart';
 
 class NewTemplatesPage extends StatefulWidget {
   const NewTemplatesPage({Key key, this.userTemplate}) : super(key: key);
+
   final UserTemplate userTemplate;
 
   static Future<void> show(BuildContext context,
@@ -32,6 +35,7 @@ class _NewTemplatesPageState extends State<NewTemplatesPage> {
   final _formKey = GlobalKey<FormState>();
   String _title;
   String _description;
+  String _coverPhoto;
 
   @override
   void initState() {
@@ -39,10 +43,9 @@ class _NewTemplatesPageState extends State<NewTemplatesPage> {
     if (widget.userTemplate != null) {
       _title = widget.userTemplate.title;
       _description = widget.userTemplate.description;
+      _coverPhoto = widget.userTemplate.coverPhoto;
     }
   }
-
-
 
   bool _validateAndSaveForm() {
     final form = _formKey.currentState;
@@ -52,7 +55,6 @@ class _NewTemplatesPageState extends State<NewTemplatesPage> {
     }
     return false;
   }
-
 
   Future<void> _submit() async {
     if (_validateAndSaveForm()) {
@@ -74,10 +76,10 @@ class _NewTemplatesPageState extends State<NewTemplatesPage> {
         } else {
           final id = widget.userTemplate?.id ?? documentIdFromCurrentDate();
           final userTemplate = UserTemplate(
-            id: id,
-            title: _title,
-            description: _description,
-          );
+              id: id,
+              title: _title,
+              description: _description,
+              coverPhoto: _coverPhoto);
           await database.setUserTemplate(userTemplate);
           Navigator.of(context).pop();
           TemplateSectionsPage.show(context);
@@ -107,15 +109,18 @@ class _NewTemplatesPageState extends State<NewTemplatesPage> {
                 ),
               ),
               SizedBox(height: 10.0),
-              RaisedButton(child:Text('Create Template'),onPressed: _submit)
+              //MediaButton(uid: widget.userSnapshot.data.uid, userTemplateId: widget.userTemplate.id),
+              FlatButton.icon(
+                onPressed: _submit,
+                icon: Icon(Icons.save),
+                label: Text('Save'),
+              ),
             ],
           ),
         ),
       ),
     );
   }
-
-
 
   Widget _buildForm() {
     return Form(

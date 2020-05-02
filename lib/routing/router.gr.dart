@@ -10,9 +10,9 @@ import 'package:auto_route/router_utils.dart';
 import 'package:quickspecpro/app/auth/auth_widget.dart';
 import 'package:quickspecpro/services/firebase_auth_service.dart';
 import 'package:quickspecpro/app/auth/login_page.dart';
+import 'package:quickspecpro/app/userTemplatePages/user_templates_page.dart';
 import 'package:quickspecpro/app/inspectionPages/inspections_page.dart';
 import 'package:quickspecpro/app/templateLibraryPages/template_library_page.dart';
-import 'package:quickspecpro/app/userTemplatePages/user_templates_page.dart';
 import 'package:quickspecpro/app/userTemplatePages/new_template_page.dart';
 import 'package:quickspecpro/app/models/userTemplate/template.dart';
 import 'package:quickspecpro/app/accountPages/account_page.dart';
@@ -23,9 +23,9 @@ import 'package:quickspecpro/app/userTemplatePages/template_sections_page.dart';
 class Router {
   static const authWidget = '/';
   static const loginPageBuilder = '/login-page-builder';
+  static const userTemplatesPage = '/user-templates-page';
   static const inspectionsPage = '/inspections-page';
   static const templateLibraryPage = '/template-library-page';
-  static const userTemplatesPage = '/user-templates-page';
   static const newTemplatesPage = '/new-templates-page';
   static const accountPage = '/account-page';
   static const contactsPage = '/contacts-page';
@@ -60,6 +60,16 @@ class Router {
           settings: settings,
           fullscreenDialog: true,
         );
+      case Router.userTemplatesPage:
+        if (hasInvalidArgs<Key>(args)) {
+          return misTypedArgsRoute<Key>(args);
+        }
+        final typedArgs = args as Key;
+        return MaterialPageRoute(
+          builder: (_) => UserTemplatesPage(key: typedArgs),
+          settings: settings,
+          fullscreenDialog: false,
+        );
       case Router.inspectionsPage:
         return MaterialPageRoute(
           builder: (_) => InspectionsPage(),
@@ -73,15 +83,6 @@ class Router {
         final typedArgs = args as Key;
         return MaterialPageRoute(
           builder: (_) => TemplateLibraryPage(key: typedArgs),
-          settings: settings,
-        );
-      case Router.userTemplatesPage:
-        if (hasInvalidArgs<Key>(args)) {
-          return misTypedArgsRoute<Key>(args);
-        }
-        final typedArgs = args as Key;
-        return MaterialPageRoute(
-          builder: (_) => UserTemplatesPage(key: typedArgs),
           settings: settings,
         );
       case Router.newTemplatesPage:
