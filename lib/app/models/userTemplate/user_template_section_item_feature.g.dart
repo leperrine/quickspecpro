@@ -1,21 +1,23 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'item_feature.dart';
+part of 'user_template_section_item_feature.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-ItemFeature _$ItemFeatureFromJson(Map<String, dynamic> json) {
-  return ItemFeature(
-    featureKey: json['featureKey'] as String,
+UserTemplateSectionItemFeature _$UserTemplateSectionItemFeatureFromJson(
+    Map<String, dynamic> json) {
+  return UserTemplateSectionItemFeature(
+    featureName: json['featureName'] as String,
     featureValues:
         (json['featureValues'] as List)?.map((e) => e as String)?.toList(),
   );
 }
 
-Map<String, dynamic> _$ItemFeatureToJson(ItemFeature instance) =>
+Map<String, dynamic> _$UserTemplateSectionItemFeatureToJson(
+        UserTemplateSectionItemFeature instance) =>
     <String, dynamic>{
-      'featureKey': instance.featureKey,
+      'featureName': instance.featureName,
       'featureValues': instance.featureValues,
     };

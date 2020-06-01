@@ -2,35 +2,38 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'package:provider/provider.dart';
-import 'package:quickspecpro/app/models/userTemplate/template.dart';
-import 'package:quickspecpro/app/userTemplatePages/template_sections_page.dart';
-import 'package:quickspecpro/services/firebase_auth_service.dart';
-import 'package:quickspecpro/services/firestore_database.dart';
-import 'package:quickspecpro/shared/buttons/media_button.dart';
 
-import 'package:quickspecpro/shared/navigation/basic_scaffold.dart';
+import 'package:quickspecpro/app/userTemplatePages/user_template_sections_page.dart';
+
+import 'package:quickspecpro/services/firestore_database.dart';
 import 'package:quickspecpro/routing/router.gr.dart';
+import 'package:quickspecpro/app/models/userTemplate/user_template.dart';
+import 'package:quickspecpro/shared/navigation/basic_scaffold.dart';
 import 'package:quickspecpro/shared/platform_alert_dialog.dart';
 import 'package:quickspecpro/shared/platform_exception_alert_dialog.dart';
 
-class NewTemplatesPage extends StatefulWidget {
-  const NewTemplatesPage({Key key, this.userTemplate}) : super(key: key);
+
+class NewUserTemplatesPage extends StatefulWidget {
+  const NewUserTemplatesPage({
+    Key key,
+    @required this.userTemplate,
+  }) : super(key: key);
 
   final UserTemplate userTemplate;
 
   static Future<void> show(BuildContext context,
       {UserTemplate userTemplate}) async {
     await Navigator.of(context, rootNavigator: true).pushNamed(
-      Router.newTemplatesPage,
-      arguments: NewTemplatesPageArguments(userTemplate: userTemplate),
+      Router.newUserTemplatesPage,
+      arguments: NewUserTemplatesPageArguments(userTemplate: userTemplate),
     );
   }
 
   @override
-  _NewTemplatesPageState createState() => _NewTemplatesPageState();
+  _NewUserTemplatesPageState createState() => _NewUserTemplatesPageState();
 }
 
-class _NewTemplatesPageState extends State<NewTemplatesPage> {
+class _NewUserTemplatesPageState extends State<NewUserTemplatesPage> {
   // Form State Objects
   final _formKey = GlobalKey<FormState>();
   String _title;
@@ -76,13 +79,15 @@ class _NewTemplatesPageState extends State<NewTemplatesPage> {
         } else {
           final id = widget.userTemplate?.id ?? documentIdFromCurrentDate();
           final userTemplate = UserTemplate(
-              id: id,
-              title: _title,
-              description: _description,
-              coverPhoto: _coverPhoto);
+            id: id,
+            title: _title,
+            description: _description,
+            coverPhoto: _coverPhoto,
+          );
           await database.setUserTemplate(userTemplate);
           Navigator.of(context).pop();
-          TemplateSectionsPage.show(context);
+          UserTemplateSectionsPage.show(
+              context: context, userTemplate: userTemplate);
         }
       } on PlatformException catch (e) {
         PlatformExceptionAlertDialog(

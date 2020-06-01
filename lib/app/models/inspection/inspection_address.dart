@@ -5,15 +5,15 @@ part 'inspection_address.g.dart';
 @JsonSerializable()
 class InspectionAddress {
   InspectionAddress({
-    this.address,
+    this.streetAddress,
     this.city,
     this.state,
-    this.zip,
+    this.zipCode,
   });
-  final String address;
+  final String streetAddress;
   final String city;
   final String state;
-  final String zip;
+  final String zipCode;
 
   factory InspectionAddress.fromJson(Map<String, dynamic> json) => _$InspectionAddressFromJson(json);
   Map<String, dynamic> toJson() => _$InspectionAddressToJson(this);

@@ -8,17 +8,17 @@ part of 'inspection_address.dart';
 
 InspectionAddress _$InspectionAddressFromJson(Map<String, dynamic> json) {
   return InspectionAddress(
-    address: json['address'] as String,
+    streetAddress: json['streetAddress'] as String,
     city: json['city'] as String,
     state: json['state'] as String,
-    zip: json['zip'] as String,
+    zipCode: json['zipCode'] as String,
   );
 }
 
 Map<String, dynamic> _$InspectionAddressToJson(InspectionAddress instance) =>
     <String, dynamic>{
-      'address': instance.address,
+      'streetAddress': instance.streetAddress,
       'city': instance.city,
       'state': instance.state,
-      'zip': instance.zip,
+      'zipCode': instance.zipCode,
     };

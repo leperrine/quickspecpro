@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'package:quickspecpro/app/models/userTemplate/template.dart';
-import 'package:quickspecpro/app/userTemplatePages/new_template_page.dart';
-import 'package:quickspecpro/app/userTemplatePages/template_sections_page.dart';
-import 'package:quickspecpro/app/userTemplatePages/user_template_list_tile.dart';
+import 'package:quickspecpro/app/models/userTemplate/user_template.dart';
+import 'package:quickspecpro/app/models/userTemplate/user_template_section.dart';
+import 'package:quickspecpro/app/userTemplatePages/new_user_template_page.dart';
+import 'package:quickspecpro/app/userTemplatePages/user_template_sections_page.dart';
+import 'package:quickspecpro/app/userTemplatePages/user_template_list_tiles.dart';
 import 'package:quickspecpro/services/firestore_database.dart';
 import 'package:quickspecpro/routing/router.gr.dart';
+import 'package:quickspecpro/shared/buttons/custom_raised_button.dart';
+import 'package:quickspecpro/shared/text/icon_header_text.dart';
 import 'package:quickspecpro/shared/list_items_builder.dart';
 import 'package:quickspecpro/shared/platform_exception_alert_dialog.dart';
 
@@ -14,7 +17,8 @@ class UserTemplatesPage extends StatelessWidget {
   const UserTemplatesPage({Key key});
 
   static Future<void> show(BuildContext context,
-      {UserTemplate userTemplate}) async {
+      {UserTemplate userTemplate,
+      UserTemplateSection userTemplateSection}) async {
     await Navigator.of(context, rootNavigator: true).pushNamed(
       Router.userTemplatesPage,
     );
@@ -43,17 +47,12 @@ class UserTemplatesPage extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            Center(
-              child: Text(
-                'Your Templates',
-                style: TextStyle(fontSize: 20.0),
-              ),
-            ),
+            IconHeaderText(icon: Icons.dashboard, headerText: 'Your Templates'),
             FlatButton.icon(
               textColor: Colors.green,
               icon: Icon(Icons.add),
               label: Text('add new'),
-              onPressed: () => NewTemplatesPage.show(context),
+              onPressed: () => NewUserTemplatesPage.show(context),
             ),
           ],
         ),
@@ -77,15 +76,50 @@ class UserTemplatesPage extends StatelessWidget {
           itemBuilder: (context, userTemplate) => Dismissible(
             key: Key('userTemplate-${userTemplate.id}'),
             background: Container(
-              color: Colors.red,
+              color: Colors.red[600],
+              child: Icon(
+                Icons.delete,
+                color: Colors.white,
+                size: 40,
+              ),
+              alignment: Alignment.centerRight,
+              padding: EdgeInsets.only(right: 20),
+              //margin: EdgeInsets.symmetric(horizontal: 15, vertical: 4),
             ),
             direction: DismissDirection.endToStart,
+            confirmDismiss: (direction) {
+              return showDialog(
+                context: context,
+                builder: (context) => AlertDialog(
+                  title: Text('Are You Sure?'),
+                  content:
+                      Text('Do you want to delete this inspection template?'),
+                  actions: <Widget>[
+                    CustomRaisedButton(
+                      child: Text('No'),
+                      onPressed: () {
+                        Navigator.of(context).pop(false);
+                      },
+                    ),
+                    CustomRaisedButton(
+                      child: Text('Yes'),
+                      onPressed: () {
+                        Navigator.of(context).pop(true);
+                      },
+                    ),
+                  ],
+                ),
+              );
+            },
             onDismissed: (direction) =>
                 _deleteUserTemplate(context, userTemplate),
             child: UserTemplateListTile(
               userTemplate: userTemplate,
-              onTap: () =>
-                  TemplateSectionsPage.show(context, userTemplate: userTemplate),
+              onTap: () => UserTemplateSectionsPage.show(
+                context: context,
+                userTemplate: userTemplate,
+
+              ),
             ),
           ),
         );

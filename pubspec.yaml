@@ -21,14 +21,13 @@ dependencies:
     sdk: flutter
   http: ^0.12.0+4
   provider: 
-  rxdart: ^0.23.1
-  flutter_bloc: ^3.2.0
   cloud_firestore: ^0.13.4
   firebase_auth: ^0.15.5+2
   firebase_storage: ^3.1.1
   intl: ^0.16.0
   auto_route: ^0.2.2
   json_annotation: ^3.0.1
+  table_calendar:
   flutter_svg: ^0.17.3+1
   image_picker: ^0.6.4
   video_player: ^0.10.8+1

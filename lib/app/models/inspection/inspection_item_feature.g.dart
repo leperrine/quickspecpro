@@ -1,20 +1,22 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'item_feature.dart';
+part of 'inspection_item_feature.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-ItemFeature _$ItemFeatureFromJson(Map<String, dynamic> json) {
-  return ItemFeature(
+InspectionItemFeature _$InspectionItemFeatureFromJson(
+    Map<String, dynamic> json) {
+  return InspectionItemFeature(
     featureKey: json['featureKey'] as String,
     featureValues:
         (json['featureValues'] as List)?.map((e) => e as String)?.toList(),
   );
 }
 
-Map<String, dynamic> _$ItemFeatureToJson(ItemFeature instance) =>
+Map<String, dynamic> _$InspectionItemFeatureToJson(
+        InspectionItemFeature instance) =>
     <String, dynamic>{
       'featureKey': instance.featureKey,
       'featureValues': instance.featureValues,

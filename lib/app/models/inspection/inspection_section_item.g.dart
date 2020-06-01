@@ -1,22 +1,24 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'item_observation.dart';
+part of 'inspection_section_item.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-ItemObservation _$ItemObservationFromJson(Map<String, dynamic> json) {
-  return ItemObservation(
+InspectionSectionItem _$InspectionSectionItemFromJson(
+    Map<String, dynamic> json) {
+  return InspectionSectionItem(
+    id: json['id'] as String,
     title: json['title'] as String,
     description: json['description'] as String,
-    mediaUrl: json['mediaUrl'] as String,
   );
 }
 
-Map<String, dynamic> _$ItemObservationToJson(ItemObservation instance) =>
+Map<String, dynamic> _$InspectionSectionItemToJson(
+        InspectionSectionItem instance) =>
     <String, dynamic>{
+      'id': instance.id,
       'title': instance.title,
       'description': instance.description,
-      'mediaUrl': instance.mediaUrl,
     };

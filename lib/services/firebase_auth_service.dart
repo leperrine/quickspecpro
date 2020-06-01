@@ -10,7 +10,6 @@ class User {
     @required this.uid,
     this.email,
     this.photoUrl,
-    this.diaplayName,
     this.fullName,
     this.companyName,
     this.companyLogoUrl,
@@ -19,7 +18,6 @@ class User {
   final String uid;
   final String email;
   final String photoUrl;
-  final String diaplayName;
   final String fullName;
   final String companyName;
   final String companyLogoUrl;
@@ -38,7 +36,6 @@ class FirebaseAuthService {
       uid: user.uid,
       email: user.email,
       photoUrl: user.photoUrl,
-      diaplayName: user.displayName,
     );
   }
 

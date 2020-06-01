@@ -9,7 +9,6 @@ import 'package:quickspecpro/shared/navigation/core_drawer.dart';
 
 class CoreScaffold extends StatefulWidget {
   CoreScaffold({Key key}) : super(key: key);
-  
 
   @override
   _CoreScaffoldState createState() => _CoreScaffoldState();
@@ -32,8 +31,10 @@ class _CoreScaffoldState extends State<CoreScaffold> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawerScrimColor: Colors.black54,
       key: Key(Keys.tabBar),
       appBar: AppBar(
+        iconTheme: IconThemeData(color: Colors.black),
         elevation: 5,
         actions: <Widget>[
           Logo(),
@@ -51,23 +52,39 @@ class _CoreScaffoldState extends State<CoreScaffold> {
 
   BottomAppBar buildBottomAppBar(BuildContext context) {
     return BottomAppBar(
+      color: Colors.blue,
       shape: const CircularNotchedRectangle(),
       child: BottomNavigationBar(
-        fixedColor: Theme.of(context).primaryColor,
-        unselectedItemColor: Colors.black87,
-        unselectedIconTheme: IconThemeData(color: Colors.black87),
         showUnselectedLabels: false,
         type: BottomNavigationBarType.shifting,
-        backgroundColor: Theme.of(context).primaryColor,
+        backgroundColor: Colors.blue,
         currentIndex: selectedIndex,
         key: Key(Keys.tabBar),
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-              icon: Icon(Icons.account_circle), title: Text('Contacts')),
+            backgroundColor: Colors.blue,
+            icon: const Icon(
+              Icons.supervised_user_circle,
+              color: Colors.white,
+            ),
+            title: const Text('Contacts'),
+          ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.dashboard), title: Text('Templates')),
+            backgroundColor: Colors.blue,
+            icon: const Icon(
+              Icons.dashboard,
+              color: Colors.white,
+            ),
+            title: const Text('Templates'),
+          ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.assignment), title: Text('Inspections')),
+            backgroundColor: Colors.blue,
+            icon: const Icon(
+              Icons.assignment,
+              color: Colors.white,
+            ),
+            title: const Text('Inspections'),
+          ),
         ],
         onTap: _onTabTapped,
       ),
