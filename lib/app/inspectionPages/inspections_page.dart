@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:quickspecpro/app/inspectionPages/new_inspection_contact_page.dart';
+import 'package:quickspecpro/app/inspectionPages/new_inspection_sections_page.dart';
 
 import 'package:quickspecpro/app/models/inspection/inspection.dart';
 import 'package:quickspecpro/services/firestore_database.dart';
@@ -112,8 +113,10 @@ class InspectionsPage extends StatelessWidget {
             onDismissed: (direction) => _deleteInspection(context, inspection),
             child: InspectionListTile(
               inspection: inspection,
-              // TODO: Show Web Version of Inspection
-              onTap: () {},
+              onTap: () => NewInspectionSectionsPage.show(
+                context,
+                inspection: inspection,
+              ),
             ),
           ),
         );

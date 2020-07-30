@@ -22,6 +22,8 @@ import 'package:quickspecpro/app/inspectionPages/new_inspection_date_page.dart';
 import 'package:quickspecpro/app/models/inspection/inspection.dart';
 import 'package:quickspecpro/app/inspectionPages/new_inspection_address_page.dart';
 import 'package:quickspecpro/app/models/inspection/inspection_address.dart';
+import 'package:quickspecpro/app/inspectionPages/new_inspection_choose_template_page.dart';
+import 'package:quickspecpro/app/inspectionPages/new_inspection_sections_page.dart';
 import 'package:quickspecpro/app/userTemplatePages/user_templates_page.dart';
 import 'package:quickspecpro/app/userTemplatePages/new_user_template_page.dart';
 import 'package:quickspecpro/app/models/userTemplate/user_template.dart';
@@ -47,6 +49,9 @@ class Router {
   static const newInspectionContactPage = '/new-inspection-contact-page';
   static const newInspectionDatePage = '/new-inspection-date-page';
   static const newInspectionAddressPage = '/new-inspection-address-page';
+  static const newInspectionChooseTemplatePage =
+      '/new-inspection-choose-template-page';
+  static const newInspectionSectionsPage = '/new-inspection-sections-page';
   static const userTemplatesPage = '/user-templates-page';
   static const newUserTemplatesPage = '/new-user-templates-page';
   static const userTemplateSectionsPage = '/user-template-sections-page';
@@ -182,6 +187,33 @@ class Router {
               contact: typedArgs.contact,
               inspection: typedArgs.inspection,
               inspectionAddress: typedArgs.inspectionAddress),
+          settings: settings,
+        );
+      case Router.newInspectionChooseTemplatePage:
+        if (hasInvalidArgs<NewInspectionChooseTemplatePageArguments>(args)) {
+          return misTypedArgsRoute<NewInspectionChooseTemplatePageArguments>(
+              args);
+        }
+        final typedArgs = args as NewInspectionChooseTemplatePageArguments ??
+            NewInspectionChooseTemplatePageArguments();
+        return MaterialPageRoute(
+          builder: (_) => NewInspectionChooseTemplatePage(
+              key: typedArgs.key,
+              contact: typedArgs.contact,
+              inspection: typedArgs.inspection),
+          settings: settings,
+        );
+      case Router.newInspectionSectionsPage:
+        if (hasInvalidArgs<NewInspectionSectionsPageArguments>(args)) {
+          return misTypedArgsRoute<NewInspectionSectionsPageArguments>(args);
+        }
+        final typedArgs = args as NewInspectionSectionsPageArguments ??
+            NewInspectionSectionsPageArguments();
+        return MaterialPageRoute(
+          builder: (_) => NewInspectionSectionsPage(
+              key: typedArgs.key,
+              contact: typedArgs.contact,
+              inspection: typedArgs.inspection),
           settings: settings,
         );
       case Router.userTemplatesPage:
@@ -350,6 +382,23 @@ class NewInspectionAddressPageArguments {
   final InspectionAddress inspectionAddress;
   NewInspectionAddressPageArguments(
       {this.key, this.contact, this.inspection, this.inspectionAddress});
+}
+
+//NewInspectionChooseTemplatePage arguments holder class
+class NewInspectionChooseTemplatePageArguments {
+  final Key key;
+  final Contact contact;
+  final Inspection inspection;
+  NewInspectionChooseTemplatePageArguments(
+      {this.key, this.contact, this.inspection});
+}
+
+//NewInspectionSectionsPage arguments holder class
+class NewInspectionSectionsPageArguments {
+  final Key key;
+  final Contact contact;
+  final Inspection inspection;
+  NewInspectionSectionsPageArguments({this.key, this.contact, this.inspection});
 }
 
 //NewUserTemplatesPage arguments holder class

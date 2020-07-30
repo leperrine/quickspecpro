@@ -51,8 +51,11 @@ class _NewInspectionDatePageState extends State<NewInspectionDatePage> {
     final inspection = Inspection(
       date: _date,
     );
-    Navigator.of(context).pop();
-    NewInspectionDatePage.show(context, inspection: inspection);
+    NewInspectionAddressPage.show(
+      context,
+      inspection: inspection,
+      contact: widget.contact,
+    );
   }
 
   @override
@@ -80,7 +83,7 @@ class _NewInspectionDatePageState extends State<NewInspectionDatePage> {
                       'Skip',
                       style: TextStyle(color: Colors.grey),
                     ),
-                    onPressed: () => NewInspectionAddressPage.show(context),
+                    onPressed: _submit,
                   ),
                   InspectionFormNextButtonGreen(onPressed: _submit),
                 ],

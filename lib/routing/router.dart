@@ -5,8 +5,10 @@ import 'package:quickspecpro/app/contactPages/contacts_page.dart';
 import 'package:quickspecpro/app/contactPages/new_contact_page.dart';
 import 'package:quickspecpro/app/inspectionPages/inspections_page.dart';
 import 'package:quickspecpro/app/inspectionPages/new_inspection_address_page.dart';
+import 'package:quickspecpro/app/inspectionPages/new_inspection_choose_template_page.dart';
 import 'package:quickspecpro/app/inspectionPages/new_inspection_contact_page.dart';
 import 'package:quickspecpro/app/inspectionPages/new_inspection_date_page.dart';
+import 'package:quickspecpro/app/inspectionPages/new_inspection_sections_page.dart';
 import 'package:quickspecpro/app/settingsPages/settings_page.dart';
 import 'package:quickspecpro/app/userTemplatePages/new_user_template_section_item_feature_page.dart';
 import 'package:quickspecpro/app/userTemplatePages/new_user_template_section_page.dart';
@@ -41,6 +43,8 @@ class $Router {
   NewInspectionContactPage newInspectionContactPage;
   NewInspectionDatePage newInspectionDatePage;
   NewInspectionAddressPage newInspectionAddressPage;
+  NewInspectionChooseTemplatePage newInspectionChooseTemplatePage;
+  NewInspectionSectionsPage newInspectionSectionsPage;
 
   // User Template Page Routes
   @MaterialRoute(fullscreenDialog: false)
@@ -48,7 +52,7 @@ class $Router {
   NewUserTemplatesPage newUserTemplatesPage;
   UserTemplateSectionsPage userTemplateSectionsPage;
   NewUserTemplateSectionPage newUserTemplateSectionPage;
-  UserTemplateSectionItemsPage userTemplateSectionItemsPage; 
+  UserTemplateSectionItemsPage userTemplateSectionItemsPage;
   NewUserTemplateSectionItemPage newUserTemplateSectionItemPage;
   UserTemplateSectionItemFeaturesPage userTemplateSectionItemFeaturesPage;
   NewUserTemplateSectionItemFeaturePage newUserTemplateSectionItemFeaturePage;

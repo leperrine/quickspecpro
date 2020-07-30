@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 import 'package:quickspecpro/app/inspectionPages/inspection_form_next_button_green.dart';
+import 'package:quickspecpro/app/inspectionPages/new_inspection_choose_template_page.dart';
 import 'package:quickspecpro/app/models/contact/contact.dart';
 import 'package:quickspecpro/app/models/inspection/inspection.dart';
 import 'package:quickspecpro/app/models/inspection/inspection_address.dart';
@@ -26,15 +27,17 @@ class NewInspectionAddressPage extends StatefulWidget {
   final InspectionAddress inspectionAddress;
 
   static Future<void> show(BuildContext context,
-      {Inspection inspection}) async {
+      {Inspection inspection, Contact contact}) async {
     await Navigator.of(context, rootNavigator: true).pushNamed(
       Router.newInspectionAddressPage,
-      arguments: NewInspectionAddressPageArguments(inspection: inspection),
+      arguments: NewInspectionAddressPageArguments(
+          inspection: inspection, contact: contact),
     );
   }
 
   @override
-  _NewInspectionAddressPageState createState() => _NewInspectionAddressPageState();
+  _NewInspectionAddressPageState createState() =>
+      _NewInspectionAddressPageState();
 }
 
 class _NewInspectionAddressPageState extends State<NewInspectionAddressPage> {
@@ -68,22 +71,21 @@ class _NewInspectionAddressPageState extends State<NewInspectionAddressPage> {
   Future<void> _submit() async {
     if (_validateAndSaveForm()) {
       try {
-        final database = Provider.of<FirestoreDatabase>(context, listen: false);
-        final id = widget.inspection?.id ?? documentIdFromCurrentDate();
-        final inspectionAddress = InspectionAddress(
+        final newInspectionAddress = InspectionAddress(
           streetAddress: _streetAddress,
           city: _city,
           state: _state,
           zipCode: _zipCode,
         );
         final inspection = Inspection(
-          id: id,
           date: widget.inspection?.date ?? null,
-          address: inspectionAddress,
+          address: newInspectionAddress,
         );
-        await database.setInspection(inspection);
-        Navigator.of(context).pop();
-        NewInspectionAddressPage.show(context, inspection: inspection);
+        NewInspectionChooseTemplatePage.show(
+          context,
+          contact: widget.contact,
+          inspection: inspection,
+        );
       } on PlatformException catch (e) {
         PlatformExceptionAlertDialog(
           title: 'Operation Failed',
@@ -162,11 +164,11 @@ class _NewInspectionAddressPageState extends State<NewInspectionAddressPage> {
       TextFormField(
         decoration: InputDecoration(labelText: 'Zip Code'),
         keyboardAppearance: Brightness.light,
-        keyboardType: TextInputType.text,
+        keyboardType: TextInputType.number,
         initialValue: _zipCode,
         validator: (value) =>
             value.isNotEmpty ? null : 'Zip Code can\'t be empty',
-        onSaved: (value) => _state = value,
+        onSaved: (value) => _zipCode = value,
       ),
       SizedBox(height: 16),
     ];

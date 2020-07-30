@@ -9,14 +9,18 @@ class InspectionListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var parsedDate = DateTime.parse(inspection.date.toString());
+    var formattedDate =
+        '${parsedDate.month}-${parsedDate.day}-${parsedDate.year}';
+    var formattedAddress =
+        '${inspection.address.streetAddress}, ${inspection.address.city} ${inspection.address.state} ${inspection.address.zipCode}';
     return ListTile(
-      // leading: Image.network(userTemplate.coverPhoto),
-      title: inspection.title != null
-          ? Text(inspection.title)
-          : Text('Title Not Found'),
-      trailing: inspection.description != null
-          ? Text(inspection.description)
-          : Text('Description Not Found'),
+      title: inspection.address != null
+          ? Text(formattedAddress)
+          : Text('Address Not Found'),
+      trailing: inspection.date != null
+          ? Text(formattedDate)
+          : Text('Date Not Found'),
       onTap: onTap,
     );
   }
